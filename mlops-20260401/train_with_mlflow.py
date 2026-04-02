@@ -47,7 +47,8 @@ param_list = [
  
 # ── 3. 파라미터별 실험 실행 ───────────────────────────────────
 for params in param_list:
-    run_name = f"n{params['n_estimators']}_d{params['max_depth']}"  # ex) "n100_d3" → MLflow UI에서 식별용
+    run_name = f"n{params['n_es
+    timators']}_d{params['max_depth']}"  # ex) "n100_d3" → MLflow UI에서 식별용
     with mlflow.start_run(run_name=run_name):                # 이 블록 안의 모든 기록이 하나의 run으로 묶임
  
         # 전처리(StandardScaler) + 모델을 하나의 파이프라인으로 구성
